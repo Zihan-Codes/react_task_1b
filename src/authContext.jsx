@@ -14,6 +14,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "LOGIN":
       //TODO
+      sdk.login();
       return {
         ...state,
       };
@@ -46,6 +47,7 @@ const AuthProvider = ({ children }) => {
 
   React.useEffect(() => {
     //TODO
+    reducer();
   }, []);
 
   return (

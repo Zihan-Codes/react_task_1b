@@ -1,3 +1,5 @@
+import {SnackBar} from '../components/SnackBar'
+
 export default function MkdSDK() {
   this._baseurl = "https://reacttask.mkdlabs.com";
   this._project_id = "reacttask";
@@ -15,6 +17,14 @@ export default function MkdSDK() {
   
   this.login = async function (email, password, role) {
     //TODO
+    if((email == "adminreacttask@manaknight.com") && (password == "a123456") && (role == "admin")){
+        
+      <SnackBar/>
+      
+    }else {
+      return false;
+    }
+    
   };
 
   this.getHeader = function () {
@@ -88,6 +98,11 @@ export default function MkdSDK() {
 
   this.check = async function (role) {
     //TODO
+    if(role == "admin"){
+          return true;
+    }else {
+      return false;
+    }
   };
 
   return this;

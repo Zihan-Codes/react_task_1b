@@ -28,6 +28,7 @@ const AdminLoginPage = () => {
   const onSubmit = async (data) => {
     let sdk = new MkdSDK();
     //TODO
+    await sdk.login(...register("email"), ...register("password"), sdk.check)
   };
 
   return (
